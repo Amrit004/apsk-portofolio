@@ -11,7 +11,6 @@ const projects = [
     description: "Real-time AWS SOC simulation dashboard with live threat feed, animated world threat map, IAM activity charts, and compliance scoring.",
     tech: ["Cloud Security", "AWS Architecture", "IAM & Access Control", "SOC Dashboard", "Vanilla JS"],
     github: "https://github.com/Amrit004/SecureVault",
-    live: "https://securevault.vercel.app",
     featured: true,
   },
   {
@@ -21,7 +20,6 @@ const projects = [
     description: "Browser-based cryptographic toolkit with AES-256 encryption, SHA/MD5 hashing, JWT decoder, password strength analyser using Web Crypto API.",
     tech: ["Web Crypto API", "Vanilla JS", "Security"],
     github: "https://github.com/Amrit004/CipherOS",
-    live: "https://cipheros.vercel.app",
   },
   {
     icon: Wifi,
@@ -30,7 +28,6 @@ const projects = [
     description: "Nmap/Nessus-style scanner simulation with 4 scan modes and CVE database including Log4Shell and EternalBlue.",
     tech: ["Network Security", "CVE Analysis", "Port Scanning"],
     github: "https://github.com/Amrit004/Netscan-pro",
-    live: "https://netscan-pro.vercel.app",
   },
   {
     icon: Plane,
@@ -39,7 +36,6 @@ const projects = [
     description: "Installable PWA with client-side AI matching engine, NLP query processing, budget planning and full offline support.",
     tech: ["PWA", "Service Workers", "AI Matching"],
     github: "https://github.com/Amrit004/TravelAgencyPwa",
-    live: "https://wandr.vercel.app",
   },
   {
     icon: Kanban,
@@ -48,7 +44,6 @@ const projects = [
     description: "Kanban board with JWT authentication, drag-and-drop columns, multi-project support and activity logging.",
     tech: ["JWT Auth", "Full-Stack", "Drag & Drop"],
     github: "https://github.com/Amrit004/CodeFlow",
-    live: "https://codeflow.vercel.app",
   },
   {
     icon: BarChart,
@@ -148,28 +143,15 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                <a
+              <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                 >
                   <Github className="w-4 h-4" />
-                  GitHub
+                  View on GitHub
                 </a>
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors text-sm font-medium"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                )}
-              </div>
             </motion.div>
           ))}
         </div>
