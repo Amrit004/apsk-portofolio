@@ -29,31 +29,31 @@ export default function Hero() {
   }, [currentRole]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <div className="max-w-6xl mx-auto px-6 pt-2">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center relative py-8 md:py-0">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 pt-16 md:pt-4">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             className="relative"
           >
-            <h1 className="text-3xl font-bold gradient-text">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2 md:mb-3">
               Amritpal Singh Kaur
             </h1>
-            <p className="text-cyan-400 font-medium mb-4">Based in London, United Kingdom</p>
+            <p className="text-cyan-400 font-medium mb-3 md:mb-4">Based in London, United Kingdom</p>
 
-            <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">
               Full-Stack Software Developer
             </h2>
-            <p className="text-xl text-purple-400 mb-4">MSc Computer Science – Queen Mary University of London</p>
+            <p className="text-lg md:text-xl text-purple-400 mb-3 md:mb-4">MSc Computer Science – Queen Mary University of London</p>
             
-            <p className="text-slate-400 mb-4 max-w-lg">
+            <p className="text-slate-400 mb-3 md:mb-4 max-w-lg">
               I design and build scalable web applications, REST APIs, and AI-powered systems using modern JavaScript technologies.
             </p>
             
-            <p className="text-slate-400 mb-6 max-w-lg">
+            <p className="text-slate-400 mb-4 md:mb-6 max-w-lg">
               I am a Computer Science postgraduate specialising in full-stack development and AI-integrated applications. I am currently seeking graduate and junior software engineering opportunities.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
               <a
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-cyan-500/25"
@@ -76,7 +76,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex gap-4 mt-5">
+            <div className="flex gap-4 mt-4 md:mt-5">
               <a
                 href="https://github.com/Amrit004"
                 target="_blank"
@@ -132,7 +132,7 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="flex justify-center mt-2 gap-6 text-center"
+          className="flex justify-center mt-4 md:mt-8 gap-6 md:gap-12 text-center"
         >
           <div>
             <div className="text-2xl font-bold text-cyan-400">3</div>
