@@ -40,23 +40,30 @@ html.dark {
   --glass-border: rgba(0, 212, 255, 0.1);
 }
 
-/* Light mode - vanilla white */
+/* Light mode - soft white/light gray */
 html.light, html.light body {
-  background: #ffffff !important;
+  background: #f8fafc !important;
   background-image: none !important;
   background-attachment: fixed;
 }
 
 html.light {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f1f5f9;
-  --text-primary: #0f172a;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #e2e8f0;
+  --text-primary: #1e293b;
   --text-secondary: #64748b;
-  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
   --glass-border: rgba(0, 212, 255, 0.3);
 }
 
 .gradient-text {
+  background: linear-gradient(135deg, #0891b2 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html.dark .gradient-text {
   background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #ff006e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

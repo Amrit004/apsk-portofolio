@@ -10,7 +10,7 @@ export default function LoadingSpinner() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 500);
 
     // Check theme after mount
     if (typeof window !== "undefined") {

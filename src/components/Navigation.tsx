@@ -38,8 +38,8 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 text-xl font-bold" aria-label="APSK Portfolio Home">
-            <Code2 className="w-8 h-8 text-cyan-400" />
-            <span className="gradient-text">APSK</span>
+            <Code2 className="w-8 h-8 text-cyan-600 dark:text-cyan-400" />
+            <span className="text-slate-800 dark:text-white">APSK</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8" role="menubar">
