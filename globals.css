@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #06b6d4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  /* Prevent ultra-wide blowout */
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+/* Improve WCAG AA compliance: slate-400 (#94a3b8) on slate-950 (#020617) = 7.5:1 ✓ */
+/* Use text-slate-400 for body copy instead of text-slate-500 (#64748b = 4.3:1 only passes AA large) */
+.text-secondary {
+  color: #94a3b8; /* slate-400 — 7.5:1 contrast on slate-950 */
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow {
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
+}
+
+/* Visible focus ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
