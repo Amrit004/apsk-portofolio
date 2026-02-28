@@ -33,27 +33,27 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 md:px-6 pt-16 md:pt-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
-            className="relative"
+            className="relative text-center lg:text-left"
           >
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2 md:mb-3">
               Amritpal Singh Kaur
             </h1>
             <p className="text-cyan-400 font-medium mb-3 md:mb-4">Based in London, United Kingdom</p>
 
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold gradient-text mb-3 md:mb-4">
+            <h2 className="text-xl md:text-2xl lg:text-4xl font-bold gradient-text mb-3 md:mb-4">
               Full-Stack Software Developer
             </h2>
-            <p className="text-lg md:text-xl text-purple-400 mb-3 md:mb-4">MSc Computer Science – Queen Mary University of London</p>
+            <p className="text-base md:text-lg text-purple-400 mb-3 md:mb-4 hidden sm:block">MSc Computer Science – Queen Mary University of London</p>
             
-            <p className="text-slate-400 mb-3 md:mb-4 max-w-lg">
+            <p className="text-slate-400 text-sm md:text-base mb-3 md:mb-4 max-w-lg mx-auto lg:mx-0 hidden md:block">
               I design and build scalable web applications, REST APIs, and AI-powered systems using modern JavaScript technologies.
             </p>
             
-            <p className="text-slate-400 mb-4 md:mb-6 max-w-lg">
-              I am a Computer Science postgraduate specialising in full-stack development and AI-integrated applications. I am currently seeking graduate and junior software engineering opportunities.
+            <p className="text-slate-400 text-sm md:text-base mb-4 md:mb-6 max-w-lg mx-auto lg:mx-0 hidden md:block">
+              I am a Computer Science postgraduate specialising in full-stack development and AI-integrated applications.
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4 md:mt-0">
               <a
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-cyan-500/25"
@@ -76,7 +76,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex gap-4 mt-4 md:mt-5">
+            <div className="flex justify-center lg:justify-start gap-4 mt-4 md:mt-5">
               <a
                 href="https://github.com/Amrit004"
                 target="_blank"
@@ -132,18 +132,18 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="flex justify-center mt-4 md:mt-8 gap-6 md:gap-12 text-center"
+          className="flex justify-center mt-4 md:mt-8 gap-4 md:gap-12 text-center"
         >
           <div>
-            <div className="text-2xl font-bold text-cyan-400">3</div>
+            <div className="text-xl md:text-2xl font-bold text-cyan-400">3</div>
             <div className="text-slate-500 text-xs">Enterprise</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-purple-400">2</div>
+            <div className="text-xl md:text-2xl font-bold text-purple-400">2</div>
             <div className="text-slate-500 text-xs">CS Degrees</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-green-400">5</div>
+            <div className="text-xl md:text-2xl font-bold text-green-400">5</div>
             <div className="text-slate-500 text-xs">Languages</div>
           </div>
         </motion.div>
