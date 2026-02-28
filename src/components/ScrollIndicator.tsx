@@ -12,14 +12,14 @@ export default function ScrollIndicator() {
 
   return (
     <motion.button
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 2, duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.6 }}
+      whileHover={{ opacity: 1 }}
       onClick={scrollToContent}
       className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 cursor-pointer group"
       aria-label="Scroll to content"
     >
-      <span className="text-sm opacity-60 group-hover:opacity-100 transition-opacity">Scroll</span>
+      <span className="text-sm transition-opacity">Scroll</span>
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}

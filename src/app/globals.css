@@ -17,99 +17,31 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: #0F1115;
+  background: #030014;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.1), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(124, 58, 237, 0.08), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 212, 255, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(124, 58, 237, 0.1), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(255, 0, 110, 0.08), transparent);
   background-attachment: fixed;
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 17, 21, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(3, 0, 20, 0.7) 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(59, 130, 246, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .glass-card:hover {
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
-}
-
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: inherit;
-}
-
-/* Dark mode */
-html.dark, html.dark body {
-  background: #0B0D10;
-  background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(64, 224, 255, 0.1), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(124, 58, 237, 0.08), transparent);
-  background-attachment: fixed;
-}
-
-html.dark {
-  --bg-primary: #0B0D10;
-  --bg-secondary: #1A1B1F;
-  --text-primary: #E8EBEE;
-  --text-secondary: #9CA3AF;
-  --glass-bg: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(11, 13, 16, 0.8) 100%);
-  --glass-border: rgba(64, 224, 255, 0.15);
-  --accent: #40E0FF;
-  --accent-hover: #00B8D4;
-}
-
-/* Light mode - Crisp Neutral + Calm Accent */
-html.light, html.light body {
-  background: #F8F9FA;
-  background-image: none;
-  background-attachment: fixed;
-}
-
-html.light {
-  --bg-primary: #F8F9FA;
-  --bg-secondary: #E9ECEF;
-  --text-primary: #222222;
-  --text-secondary: #555555;
-  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
-  --glass-border: rgba(0, 121, 140, 0.2);
-  --accent: #00798C;
-  --accent-hover: #0097A7;
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.15);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #3B82F6 0%, #7c3aed 50%, #db2777 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #ff006e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-html.dark .glass-card {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.glass-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 32px rgba(0, 121, 140, 0.15);
-}
-
-html.dark .glass-card:hover {
-  box-shadow: 0 8px 32px rgba(64, 224, 255, 0.15);
 }
 
 .glow {
