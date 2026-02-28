@@ -108,9 +108,8 @@ export default function Hero() {
                   Get In Touch <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1ZHsoCGm7w2DQfw8XGu648o_2fotxtFd7"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/cv.pdf"
+                  download="Amritpal-Singh-Kaur-CV.pdf"
                   onClick={() => setDownloads(d => d + 1)}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold transition-all"
                 >
