@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Amritpal Singh Kaur | Graduate Software Engineer",
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
     description: "Multilingual software engineer with enterprise experience in FinTech and travel tech, MSc candidate in Advanced CS.",
     type: "website",
     locale: "en_GB",
-    url: "https://apsk-dev.vercel.app",
+    url: "https://apsk-portfolio.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
@@ -29,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="canonical" href="https://apsk-dev.vercel.app" />
+        <link rel="canonical" href="https://apsk-portfolio.vercel.app" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
@@ -39,7 +38,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Amritpal Singh Kaur",
-              "url": "https://apsk-dev.vercel.app",
+              "url": "https://apsk-portfolio.vercel.app",
               "jobTitle": "Graduate Software Engineer",
               "email": "sharysingh1144@gmail.com",
               "address": {
@@ -73,12 +72,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <ThemeProvider>
-        <body className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
-          <a href="#main-content" className="skip-link dark:bg-cyan-500 bg-cyan-600 text-white">Skip to content</a>
-          {children}
-        </body>
-      </ThemeProvider>
+      <body className="bg-slate-950 text-slate-100 antialiased">
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        {children}
+      </body>
     </html>
   );
 }

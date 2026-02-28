@@ -14,11 +14,6 @@ html {
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  background: #f8fafc;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dark body {
   background: #030014;
   background-image: 
     radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 212, 255, 0.15), transparent),
@@ -34,14 +29,8 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.dark .glass-card {
   background: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(3, 0, 20, 0.7) 100%);
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(0, 212, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -71,6 +60,12 @@ body {
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
   50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .animate-float {

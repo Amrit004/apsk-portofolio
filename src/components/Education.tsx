@@ -47,7 +47,7 @@ const certifications = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-slate-100 dark:bg-slate-900/50">
+    <section id="education" className="py-24 bg-slate-900/50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,10 +55,10 @@ export default function Education() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-4">
             Education & <span className="gradient-text">Certifications</span>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             Two degrees in computer science from UK universities, with a focus on cloud, AI, and security.
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export default function Education() {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <GraduationCap className="w-6 h-6 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{edu.degree}</h3>
+                    <h3 className="text-xl font-bold">{edu.degree}</h3>
                   </div>
                   <p className="text-cyan-400 font-medium">{edu.school}</p>
                 </div>
@@ -103,12 +103,12 @@ export default function Education() {
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-3">Key Modules:</h4>
+                <h4 className="text-sm font-semibold text-slate-400 mb-3">Key Modules:</h4>
                 <div className="flex flex-wrap gap-2">
                   {edu.modules.map((module) => (
                     <span
                       key={module}
-                      className="px-3 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm"
+                      className="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-sm"
                     >
                       {module}
                     </span>
@@ -127,15 +127,14 @@ export default function Education() {
         >
           <div className="flex items-center gap-3 mb-6">
             <Award className="w-6 h-6 text-purple-400" />
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Certifications & Training</h3>
+            <h3 className="text-xl font-bold">Certifications & Training</h3>
           </div>
           <div className="flex flex-wrap gap-3">
             {certifications.map((cert) => (
               <span
                 key={cert}
-                className="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:border-purple-500/50 text-slate-700 dark:text-slate-300 hover:text-purple-400 dark:hover:text-purple-400 transition-colors cursor-default flex items-center gap-2"
+                className="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 hover:border-purple-500/50 text-slate-300 text-sm transition-colors"
               >
-                <Award className="w-3 h-3 text-purple-400" />
                 {cert}
               </span>
             ))}

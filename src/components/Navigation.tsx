@@ -32,7 +32,7 @@ export default function Navigation() {
       role="navigation"
       aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 dark:bg-slate-950/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-slate-950/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
@@ -48,7 +48,7 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 role="menuitem"
-                className="text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors text-sm font-medium"
+                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium"
               >
                 {item.name}
               </a>
@@ -57,7 +57,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400"
+            className="md:hidden text-slate-300 hover:text-cyan-400"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
           >
@@ -76,7 +76,7 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                className="block py-2 text-slate-300 hover:text-cyan-400 transition-colors"
               >
                 {item.name}
               </a>

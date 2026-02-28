@@ -45,7 +45,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-slate-100 dark:bg-slate-900/50">
+    <section id="experience" className="py-24 bg-slate-900/50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,10 +53,10 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-4">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             Hands-on IT and technology roles in regulated, enterprise environments — giving me real-world context that most graduates lack.
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ export default function Experience() {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <Building2 className="w-6 h-6 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.company}</h3>
+                    <h3 className="text-xl font-bold">{exp.company}</h3>
                   </div>
                   <p className="text-cyan-400 font-medium">{exp.role}</p>
                 </div>
@@ -91,13 +91,13 @@ export default function Experience() {
                 </div>
               </div>
               
-              <span className="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs mb-4">
+              <span className="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs mb-4">
                 {exp.type}
               </span>
 
               <ul className="space-y-3">
                 {exp.description.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-600 dark:text-slate-400">
+                  <li key={i} className="flex items-start gap-3 text-slate-400">
                     <span className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
                     {item}
                   </li>
