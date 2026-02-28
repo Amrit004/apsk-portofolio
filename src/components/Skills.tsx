@@ -81,7 +81,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-slate-900/30">
+    <section id="skills" className="py-24 bg-slate-100 dark:bg-slate-900/30">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -89,10 +89,10 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
             Technical <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Proficiency levels based on projects, work experience, and continuous learning.
           </p>
         </motion.div>
@@ -111,17 +111,17 @@ export default function Skills() {
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
                   <category.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{category.title}</h3>
               </div>
 
               <div className="space-y-4">
                 {category.skills.map((skill, i) => (
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-slate-300">{skill.name}</span>
+                      <span className="text-slate-700 dark:text-slate-300">{skill.name}</span>
                       <span className="text-cyan-400 font-medium">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -143,7 +143,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mt-12 glass-card rounded-2xl p-8"
         >
-          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-slate-900 dark:text-white">
             <Star className="w-5 h-5 text-yellow-400" />
             Continuous Learning
           </h3>
@@ -157,7 +157,7 @@ export default function Skills() {
             ].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition-colors cursor-default flex items-center gap-2"
+                className="px-4 py-2 rounded-xl bg-slate-200/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 hover:border-cyan-500/50 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors cursor-default flex items-center gap-2"
               >
                 <Star className="w-3 h-3 text-yellow-400" />
                 {item}

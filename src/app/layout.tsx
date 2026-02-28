@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Amritpal Singh Kaur | Graduate Software Engineer",
@@ -72,9 +73,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-slate-950 text-slate-100 antialiased">
+      <body className="antialiased">
         <a href="#main-content" className="skip-link">Skip to content</a>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

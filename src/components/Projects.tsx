@@ -162,10 +162,10 @@ export default function Projects() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
               Featured <span className="gradient-text">Projects</span>
             </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Click on any project to see a preview. New: Enterprise Analytics & SOC Command Center - enterprise-grade demos with live data!
             </p>
           </motion.div>
@@ -199,12 +199,12 @@ export default function Projects() {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-                  <span className="text-sm text-slate-500">{project.category}</span>
-                  <p className="text-slate-400 mt-3 mb-4 text-sm">{project.description}</p>
+                  <h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">{project.title}</h3>
+                  <span className="text-sm text-slate-500 dark:text-slate-500">{project.category}</span>
+                  <p className="text-slate-600 dark:text-slate-400 mt-3 mb-4 text-sm">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.slice(0, 3).map((t) => (
-                      <span key={t} className="px-2 py-1 rounded-md bg-slate-800 text-slate-400 text-xs">
+                      <span key={t} className="px-2 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 text-xs">
                         {t}
                       </span>
                     ))}
@@ -224,7 +224,7 @@ export default function Projects() {
               href="https://github.com/Amrit004"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:border-cyan-500 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
             >
               View All Projects on GitHub
               <ExternalLink className="w-4 h-4" />
@@ -260,38 +260,38 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{selectedProject.title}</h3>
                   {selectedProject.featured && (
                     <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-medium">
                       Featured
                     </span>
                   )}
                 </div>
-                <span className="text-slate-400">{selectedProject.category}</span>
+                <span className="text-slate-600 dark:text-slate-400">{selectedProject.category}</span>
                 
-                <p className="text-slate-300 mt-4">{selectedProject.description}</p>
+                <p className="text-slate-700 dark:text-slate-300 mt-4">{selectedProject.description}</p>
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {selectedProject.tech.map((t) => (
-                    <span key={t} className="px-3 py-1 rounded-full bg-slate-800 text-cyan-400 text-sm">
+                    <span key={t} className="px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-cyan-400 text-sm">
                       {t}
                     </span>
                   ))}
                 </div>
 
                 <div className="space-y-3 mt-6">
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-800/50">
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-200/50 dark:bg-slate-800/50">
                     <Lightbulb className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-sm text-slate-400 font-medium">Challenge</p>
-                      <p className="text-sm text-slate-300">{selectedProject.challenge}</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400 font-medium">Challenge</p>
+                      <p className="text-sm text-slate-700 dark:text-slate-300">{selectedProject.challenge}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-800/50">
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-200/50 dark:bg-slate-800/50">
                     <Rocket className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-sm text-slate-400 font-medium">Solution</p>
-                      <p className="text-sm text-slate-300">{selectedProject.solution}</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400 font-medium">Solution</p>
+                      <p className="text-sm text-slate-700 dark:text-slate-300">{selectedProject.solution}</p>
                     </div>
                   </div>
                 </div>
