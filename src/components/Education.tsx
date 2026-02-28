@@ -47,7 +47,7 @@ const certifications = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-slate-100 dark:bg-slate-900/50">
+    <section id="education" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

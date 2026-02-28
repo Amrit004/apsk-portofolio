@@ -16,15 +16,17 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Dark mode (default) */
 html.dark {
-  background: #030014;
+  background: #030014 !important;
   background-image: 
     radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 212, 255, 0.15), transparent),
     radial-gradient(ellipse 60% 40% at 100% 0%, rgba(124, 58, 237, 0.1), transparent),
-    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(255, 0, 110, 0.08), transparent);
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(255, 0, 110, 0.08), transparent) !important;
 }
 
 html.dark {
@@ -36,21 +38,19 @@ html.dark {
   --glass-border: rgba(0, 212, 255, 0.1);
 }
 
-/* Light mode */
+/* Light mode - vanilla white */
 html.light {
-  background: #f8fafc;
-  background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 212, 255, 0.1), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(124, 58, 237, 0.08), transparent);
+  background: #ffffff !important;
+  background-image: none !important;
 }
 
 html.light {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #e2e8f0;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f5f9;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
-  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 250, 252, 0.8) 100%);
-  --glass-border: rgba(0, 212, 255, 0.2);
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  --glass-border: rgba(0, 212, 255, 0.3);
 }
 
 .gradient-text {
@@ -64,8 +64,16 @@ html.light {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.light .glass-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+html.dark .glass-card {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .glass-card:hover {
