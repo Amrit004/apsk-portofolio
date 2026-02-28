@@ -24,7 +24,20 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (stored) {
       setIsDark(stored === "dark");
     }
+    document.documentElement.classList.add(isDark ? "dark" : "light");
   }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      if (isDark) {
+        document.documentElement.classList.remove("light");
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.add("light");
+      }
+    }
+  }, [isDark, mounted]);
 
   const toggle = () => {
     const newTheme = !isDark;
@@ -34,9 +47,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   return (
     <ThemeContext.Provider value={{ isDark, toggle }}>
-      <div className={mounted ? (isDark ? "dark" : "light") : "dark"}>
-        {children}
-      </div>
+      {children}
     </ThemeContext.Provider>
   );
 }

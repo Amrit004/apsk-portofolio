@@ -17,7 +17,6 @@ export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const { isDark, toggle } = useTheme();
-  const [downloads, setDownloads] = useState(127);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -111,7 +110,6 @@ export default function Hero() {
                 <a
                   href="/cv.pdf"
                   download="Amritpal-Singh-Kaur-CV.pdf"
-                  onClick={() => setDownloads(d => d + 1)}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 hover:border-cyan-500 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 font-semibold transition-all"
                 >
                   <Download className="w-4 h-4" />
@@ -205,10 +203,6 @@ export default function Hero() {
             <div>
               <div className="text-3xl font-bold text-green-600 dark:text-green-400">5</div>
               <div className="text-slate-500 dark:text-slate-500 text-sm">Languages Spoken</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-pink-600 dark:text-pink-400">{downloads}</div>
-              <div className="text-slate-500 dark:text-slate-500 text-sm">CV Downloads</div>
             </div>
           </motion.div>
         </div>
