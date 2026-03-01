@@ -87,12 +87,10 @@ export default function Experience() {
                   <p className="text-cyan-300 text-sm">{exp.role}</p>
                 </div>
                 <div className="text-right">
-                  {exp.period !== "Cover Shifts" && (
-                    <div className="flex items-center gap-1 text-slate-400 text-xs">
-                      <Calendar className="w-3 h-3" />
-                      {exp.period}
-                    </div>
-                  )}
+                  <div className="flex items-center gap-1 text-slate-400 text-xs">
+                    <Calendar className="w-3 h-3" />
+                    {exp.period}
+                  </div>
                   <div className="flex items-center gap-1 text-slate-400 text-xs mt-0.5">
                     <MapPin className="w-3 h-3" />
                     {exp.location}
