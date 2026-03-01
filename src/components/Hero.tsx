@@ -30,7 +30,7 @@ export default function Hero() {
               Amritpal Singh Kaur
             </h1>
 
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2">
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">
               Graduate Software Engineer
             </p>
             <p className="text-cyan-400 font-medium mb-4">Cloud & Security-Focused Developer</p>
