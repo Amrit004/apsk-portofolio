@@ -7,7 +7,7 @@ const experiences = [
   {
     company: "Bank of America",
     role: "Deployment / Breakfix Engineer",
-    period: "April 2022 - Present",
+    period: "Current Assignment",
     location: "London, UK",
     type: "FinTech · Regulated",
     description: [
@@ -20,7 +20,7 @@ const experiences = [
   {
     company: "Amadeus",
     role: "Field Support Technician (Level 2)",
-    period: "Field Support",
+    period: "Cover Shifts",
     location: "London, UK",
     type: "Global Tech · Travel",
     description: [
@@ -32,7 +32,7 @@ const experiences = [
   {
     company: "ENI",
     role: "IT Technician / Support",
-    period: "IT Support",
+    period: "Cover Shifts",
     location: "London, UK",
     type: "Energy · Infrastructure",
     description: [
@@ -56,6 +56,16 @@ export default function Experience() {
           <h2 className="text-3xl font-bold mb-3 gradient-text">
             Work <span className="gradient-text">Experience</span>
           </h2>
+          
+          <div className="inline-block px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 mb-4">
+            <p className="text-cyan-400 font-medium">
+              Employed by Manpower (Zoom IT) – April 2022 - Present
+            </p>
+            <p className="text-cyan-300 text-sm">
+              Placed at: Bank of America (Current), Amadeus & ENI (Cover Shifts)
+            </p>
+          </div>
+
           <p className="text-slate-400 max-w-xl mx-auto">
             Hands-on IT and technology roles in regulated, enterprise environments.
           </p>
@@ -80,10 +90,12 @@ export default function Experience() {
                   <p className="text-cyan-300 text-sm">{exp.role}</p>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center gap-1 text-slate-400 text-xs">
-                    <Calendar className="w-3 h-3" />
-                    {exp.period}
-                  </div>
+                  {exp.period !== "Field Support" && exp.period !== "IT Support" && (
+                    <div className="flex items-center gap-1 text-slate-400 text-xs">
+                      <Calendar className="w-3 h-3" />
+                      {exp.period}
+                    </div>
+                  )}
                   <div className="flex items-center gap-1 text-slate-400 text-xs mt-0.5">
                     <MapPin className="w-3 h-3" />
                     {exp.location}
